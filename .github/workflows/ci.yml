@@ -1,0 +1,17 @@
+name: CI - Test de Base
+
+on:  # Déclencheurs
+  push:
+    branches: 
+      - main  # Le pipeline se déclenche sur les pushes vers la branche 'main'
+  pull_request:
+    branches: 
+      - main  # Le pipeline se déclenche aussi lors des pull requests vers la branche 'main'
+
+jobs:  # Ensemble des jobs
+  hello:
+    runs-on: ubuntu-latest  # Environnement du runner
+
+    steps:  # Liste des étapes à exécuter
+      - name: Afficher un message
+        run: echo "CI fonctionne !"  # Affiche "CI fonctionne !" dans les logs
