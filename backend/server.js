@@ -55,7 +55,6 @@ app.get("/db", async (req, res) => {
     });
   }
 });
-
 // START SERVER
 app.listen(PORT, () => {
   console.log(`Backend listening on port ${PORT}`);
